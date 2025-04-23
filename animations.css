@@ -1,0 +1,193 @@
+/* アニメーション用追加スタイル */
+
+/* スクロールアニメーション基本設定 */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.6s ease-in;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.slide-in-left {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+.slide-in-right {
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+.slide-in-left.visible, .slide-in-right.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* プロフィール画像のアニメーション */
+.profile-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--primary) 0%, transparent 70%);
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+
+.profile-img:hover::after {
+    opacity: 0.4;
+}
+
+/* タイムラインアニメーション */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.timeline-item.appear {
+    animation-name: timeline-fade-in;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes timeline-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* スキルアイコンのアニメーション */
+.skill-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-icon:hover {
+    transform: scale(1.2);
+    color: var(--secondary);
+}
+
+/* カードホバーエフェクト */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+/* ボタンアニメーション */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* ナビゲーションのアクティブ状態 */
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* CTA背景アニメーション */
+.cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.1) 50%, 
+        transparent 100%);
+    animation: shine 6s infinite linear;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* テキストのグラデーションエフェクト */
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
