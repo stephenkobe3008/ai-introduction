@@ -36,11 +36,6 @@ index.htmlファイル内の以下の情報を更新してください：
 プロフィール画像を追加するには、profile-imgクラスのdivをimg要素に置き換え
 プロジェクト画像を追加するには、card-imgクラスのdivをimg要素に置き換え
 
-html<!-- プロフィール画像の例 -->
-<img src="path/to/your-image.jpg" alt="プロフィール写真" class="profile-img">
-
-<!-- プロジェクト画像の例 -->
-<img src="path/to/project-image.jpg" alt="プロジェクト画像" class="card-img">
 色の変更
 styles.cssの:rootセクションで定義されている色を変更することで、サイト全体のカラースキームを簡単に更新できます：
 css:root {
