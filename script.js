@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // カードのアニメーション
+    // すべてのカードのアニメーション（プロジェクト、スキル、趣味、AIツール）
     const cards = document.querySelectorAll('.card');
     
     const observer = new IntersectionObserver(entries => {
@@ -80,7 +80,23 @@ document.addEventListener('DOMContentLoaded', function() {
         item.style.animationDelay = `${index * 0.2}s`;
     });
     
-    // モバイルナビゲーションの表示/非表示（CSSでデフォルト非表示）
+    // 趣味セクションのアニメーション
+    const hobbyCards = document.querySelectorAll('.hobby-card');
+    
+    hobbyCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(card);
+    });
+    
+    // AIツールカードのアニメーション
+    const aiToolCards = document.querySelectorAll('.ai-tool-card');
+    
+    aiToolCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(card);
+    });
+    
+    // モバイルナビゲーションの表示/非表示
     const mobileMenuBtn = document.createElement('button');
     mobileMenuBtn.className = 'mobile-menu-btn';
     mobileMenuBtn.innerHTML = '≡';
@@ -128,19 +144,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // ホビーアイコンのアニメーション
+    const hobbyIcons = document.querySelectorAll('.hobby-icon');
+    
+    hobbyIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.2) rotate(5deg)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        
+        icon.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) rotate(0deg)';
+        });
+    });
+    
     // プロジェクトカードのホバーエフェクト強化
     const projectCards = document.querySelectorAll('#projects .card');
     
     projectCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             const cardImg = this.querySelector('.card-img');
-            cardImg.style.transform = 'scale(1.05)';
-            cardImg.style.transition = 'transform 0.3s ease';
+            if (cardImg) {
+                cardImg.style.transform = 'scale(1.05)';
+                cardImg.style.transition = 'transform 0.3s ease';
+            }
         });
         
         card.addEventListener('mouseleave', function() {
             const cardImg = this.querySelector('.card-img');
-            cardImg.style.transform = 'scale(1)';
+            if (cardImg) {
+                cardImg.style.transform = 'scale(1)';
+            }
         });
     });
     

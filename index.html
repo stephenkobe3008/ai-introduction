@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My profile</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
 </head>
 <body>
     <header>
@@ -20,6 +21,8 @@
                 <a href="#about">プロフィール</a>
                 <a href="#projects">プロジェクト</a>
                 <a href="#skills">スキル</a>
+                <a href="#hobbies">趣味</a>
+                <a href="#ai-tools">AI分析</a>
                 <a href="#experience">経験</a>
                 <a href="#contact">お問い合わせ</a>
             </div>
@@ -120,7 +123,7 @@
                 <div class="card skill-card">
                     <div class="skill-icon">🤖</div>
                     <h3>AI技術</h3>
-                    <p>OpenAI API, LangChain </p>
+                    <p>OpenAI API, Anthropic API, Google AI API, LangChain</p>
                 </div>
                 
                 <div class="card skill-card">
@@ -137,6 +140,115 @@
             </div>
         </div>
     </section>
+    
+    <!-- 新しい趣味セクション -->
+    <section id="hobbies" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>趣味・特技</h2>
+                <p>仕事以外での私の活動と興味</p>
+            </div>
+            
+            <div class="hobbies-grid">
+                <div class="card hobby-card">
+                    <div class="hobby-icon">🏀</div>
+                    <h3>バスケットボール</h3>
+                    <p>学生時代から続けているバスケットボール。週末は地域のチームで汗を流しています。チームプレーを通じてコミュニケーション能力も培われました。</p>
+                </div>
+                
+                <div class="card hobby-card">
+                    <div class="hobby-icon">⚽</div>
+                    <h3>フットサル</h3>
+                    <p>友人たちと定期的にフットサルを楽しんでいます。戦略的思考と即時の判断力が鍛えられる点が魅力です。</p>
+                </div>
+                
+                <div class="card hobby-card">
+                    <div class="hobby-icon">🏌️‍♂️</div>
+                    <h3>ゴルフ</h3>
+                    <p>最近始めたゴルフにはまっています。精密さと集中力、そして自然の中でリフレッシュできる点が気に入っています。バリューゴルフグループへの興味もここから生まれました。</p>
+                </div>
+                
+                <div class="card hobby-card">
+                    <div class="hobby-icon">🧠</div>
+                    <h3>AIプロンプトエンジニアリング</h3>
+                    <p>趣味として様々な生成AIモデルのプロンプトエンジニアリングを研究しています。異なるモデルからより良い結果を引き出すテクニックの探求が楽しいです。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI分析セクション -->
+<section id="ai-tools">
+    <div class="container">
+      <div class="section-title">
+        <h2>生成AIモデル分析</h2>
+        <p>開発で活用している主要な生成AIモデルの特性と活用法</p>
+      </div>
+      
+      <div class="ai-tools-grid">
+        <!-- GPTカード -->
+        <div class="card ai-tool-card">
+          <div class="ai-logo">
+            <img src="images/gpt-logo.png" alt="GPT Logo" width="100" height="100">
+          </div>
+          <div class="ai-content">
+            <h3>GPT (OpenAI)</h3>
+            <p>汎用性の高さと多言語対応に優れた生成AIモデル。コードの生成と修正に特に強みがあり、APIの柔軟性が高いため、多くのプロダクトに組み込みやすい特徴があります。</p>
+            <p><strong>主な活用領域：</strong>コード生成、多言語コンテンツ作成、データ分析補助</p>
+            <p><strong>長所：</strong>広範な知識ベース、APIの成熟度、豊富な統合オプション</p>
+            <p><strong>課題：</strong>特定ドメインでの専門性、長文処理時の一貫性維持</p>
+          </div>
+        </div>
+        
+        <!-- Claudeカード -->
+        <div class="card ai-tool-card">
+          <div class="ai-logo">
+            <img src="images/claude-logo.png" alt="Claude Logo" width="100" height="100">
+          </div>
+          <div class="ai-content">
+            <h3>Claude (Anthropic)</h3>
+            <p>長文理解と文脈把握に優れたモデル。倫理的な配慮が強く、複雑な指示にも忠実に従うため、ユーザーサポートや詳細な文書作成に適しています。</p>
+            <p><strong>主な活用領域：</strong>カスタマーサポート、詳細な文書作成、倫理的配慮が必要な対話</p>
+            <p><strong>長所：</strong>優れた文脈理解、長文処理能力、倫理的な回答生成</p>
+            <p><strong>課題：</strong>日本語でのニュアンス理解、特定分野での専門知識の精度</p>
+          </div>
+        </div>
+        
+        <!-- Geminiカード -->
+        <div class="card ai-tool-card">
+          <div class="ai-logo">
+            <img src="images/gemini-logo.png" alt="Gemini Logo" width="100" height="100">
+          </div>
+          <div class="ai-content">
+            <h3>Gemini (Google)</h3>
+            <p>マルチモーダル処理能力に優れ、テキスト、画像、音声を統合的に理解できるモデル。Googleのサービスとの統合が容易で、検索情報との連携が強みです。</p>
+            <p><strong>主な活用領域：</strong>マルチモーダルアプリケーション、検索連携サービス、教育コンテンツ</p>
+            <p><strong>長所：</strong>画像理解能力、Google検索との連携、多様なフォーマット対応</p>
+            <p><strong>課題：</strong>テキスト生成の自然さ、特定タスクでのパフォーマンス安定性</p>
+          </div>
+        </div>
+        
+        <!-- Grokカード -->
+        <div class="card ai-tool-card">
+          <div class="ai-logo">
+            <img src="images/grok-logo.png" alt="Grok Logo" width="100" height="100">
+          </div>
+          <div class="ai-content">
+            <h3>Grok (xAI)</h3>
+            <p>最新の情報アクセスと独特の個性を持つモデル。リアルタイムデータへのアクセスと創造的な解答生成が特徴で、ユニークな体験を提供できます。</p>
+            <p><strong>主な活用領域：</strong>最新情報を必要とするアプリケーション、クリエイティブコンテンツ生成</p>
+            <p><strong>長所：</strong>リアルタイム情報へのアクセス、独創的な回答生成、ユニークな個性</p>
+            <p><strong>課題：</strong>ビジネス用途での調整、特定領域での深い専門知識</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="ai-comparison">
+        <h3 class="gradient-text">生成AIモデル比較分析</h3>
+        <p>各モデルの特性を活かした最適な活用方法を探求しています。プロジェクトの性質に応じて異なるモデルを組み合わせることで、より高度なソリューションを実現できると考えています。</p>
+      </div>
+    </div>
+  </section>
     
     <section id="experience" class="bg-light">
         <div class="container">

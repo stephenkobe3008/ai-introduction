@@ -406,4 +406,354 @@ footer {
         left: 10px;
         right: auto;
     }
+    /* ホビーセクション用スタイル */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.hobby-card {
+    text-align: center;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.hobby-card:hover .hobby-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* AI分析セクションの画像サイズ修正 */
+
+/* AIロゴコンテナのサイズ制限 */
+.ai-logo {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* はみ出した部分を隠す */
+    margin-right: 20px;
+    flex-shrink: 0; /* 画像コンテナが縮小されないようにする */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* AIロゴ画像のサイズ制御 */
+  .ai-logo img {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* アスペクト比を保持しながらコンテナに収める */
+  }
+  
+  /* AIモデルカードのレイアウト修正 */
+  .ai-tool-card {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  .ai-content {
+    flex: 1;
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .ai-logo {
+      width: 80px;
+      height: 80px;
+      margin-right: 15px;
+    }
+    
+    .ai-logo img {
+      max-width: 70px;
+      max-height: 70px;
+    }
+  }
+  
+  /* 超小型画面対応 */
+  @media (max-width: 480px) {
+    .ai-tool-card {
+      flex-direction: column;
+    }
+    
+    .ai-logo {
+      width: 100%;
+      height: 100px;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* 画像の背景色をAIに合わせて調整（オプション） */
+  .ai-logo.gpt {
+    background-color: #f0f7f3; /* GPT用の薄い緑色の背景 */
+  }
+  
+  .ai-logo.claude {
+    background-color: #f5f0ff; /* Claude用の薄い紫色の背景 */
+  }
+  
+  .ai-logo.gemini {
+    background-color: #f0f5ff; /* Gemini用の薄い青色の背景 */
+  }
+  
+  .ai-logo.grok {
+    background-color: #fff0f5; /* Grok用の薄いピンク色の背景 */
+  }
+
+/* レスポンシブデザイン追加 */
+@media (max-width: 768px) {
+    .ai-tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ai-tool-card {
+        flex-direction: column;
+    }
+    
+    .ai-logo {
+        flex: 0 0 auto;
+        height: 120px;
+        width: 100%;
+    }
+}
+
+/* 既存のスタイルを調整 */
+section {
+    padding: 6rem 0;
+}
+
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    border-radius: 3px;
+}
+
+/* アニメーション追加 */
+.hobby-card, .ai-tool-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hobby-card.visible, .ai-tool-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* AIロゴのプレースホルダー（画像がない場合） */
+.ai-logo {
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-logo::after {
+    content: attr(data-logo);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* ホビーセクション用スタイル */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.hobby-card {
+    text-align: center;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.hobby-card:hover .hobby-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* AI分析セクション用スタイル */
+.ai-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.ai-tool-card {
+    display: flex;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.ai-tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.ai-logo {
+    flex: 0 0 100px;
+    background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.ai-logo-img {
+    width: 100%;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.ai-content {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.ai-content h3 {
+    color: var(--primary-dark);
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.ai-content p {
+    margin-bottom: 0.75rem;
+}
+
+.ai-content p:last-child {
+    margin-bottom: 0;
+}
+
+.ai-comparison {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+}
+
+.ai-comparison h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* レスポンシブデザイン追加 */
+@media (max-width: 768px) {
+    .ai-tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ai-tool-card {
+        flex-direction: column;
+    }
+    
+    .ai-logo {
+        flex: 0 0 auto;
+        height: 120px;
+        width: 100%;
+    }
+}
+
+/* 既存のスタイルを調整 */
+section {
+    padding: 6rem 0;
+}
+
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    border-radius: 3px;
+}
+
+/* アニメーション追加 */
+.hobby-card, .ai-tool-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hobby-card.visible, .ai-tool-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* AIロゴのプレースホルダー（画像がない場合） */
+.ai-logo {
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-logo::after {
+    content: attr(data-logo);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
 }
