@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My profile</title>
+    <meta name="description" content="清水克俊のポートフォリオサイト - Webエンジニア・AIプロンプトデザイナー">
+    <meta name="theme-color" content="#6366f1">
+    <title>Katsutoshi Shimizu - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animations.css">
+    <!-- Font Awesome Icons CDN - モダンなアイコン -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container hero">
-            <h1>Katsutoshi shimizu</h1>
+            <h1 class="fade-in">Katsutoshi Shimizu</h1>
+            <p class="fade-in" style="--delay: 0.2s;">ITと生成AIの力でユーザー体験を革新する</p>
         </div>
     </header>
-    
     <nav>
         <div class="container nav-container">
-            <div class="logo">Portfolio</div>
+            <a href="#" class="logo">
+                <span class="logo-icon">💻</span>Portfolio
+            </a>
             <div class="nav-links">
                 <a href="#about">プロフィール</a>
                 <a href="#projects">プロジェクト</a>
@@ -32,10 +38,10 @@
     <section id="about">
         <div class="container">
             <div class="profile">
-                <img src="images/profile.jpg" alt="プロフィール写真" class="profile-img">
-                <div class="profile-content">
-                    <h2>Katsutoshi shimizuについて</h2>
-                    <p>初めましてKatsutoshi shimizuと申します。ITエンジニアとして1年の経験を持ち、Webデザインと最新のAI技術を組み合わせた革新的なソリューションの開発に情熱を注いでいます。T3 Stack（TypeScript、Next.js、tRPC、Prisma、Tailwind CSS）を用いたフルスタック開発と、生成AI技術を活用したチャットボットの開発経験があります。</p>
+                <img src="images/profile.jpg" alt="プロフィール写真" class="profile-img scale-in">
+                <div class="profile-content fade-up">
+                    <h2>Katsutoshi Shimizuについて</h2>
+                    <p>初めましてKatsutoshi Shimizuと申します。ITエンジニアとして1年の経験を持ち、Webデザインと最新のAI技術を組み合わせた革新的なソリューションの開発に情熱を注いでいます。T3 Stack（TypeScript、Next.js、tRPC、Prisma、Tailwind CSS）を用いたフルスタック開発と、生成AI技術を活用したチャットボットの開発経験があります。</p>
                     <p>技術の力でユーザー体験を向上させることに強い関心を持ち、特に生成AIがWebデザインやユーザーインターフェースにもたらす可能性に魅了されています。チームでの協働を通じて、複雑な課題に取り組むことを楽しみ、常に新しい技術を学び続けています。</p>
                     <p>バリューゴルフグループでは、これまでの経験とスキルを活かし、ゴルフ愛好家のためのより直感的で魅力的なWeb体験に貢献したいと考えています。</p>
                 </div>
@@ -46,13 +52,16 @@
     <section id="projects" class="bg-light">
         <div class="container">
             <div class="section-title">
-                <h2>プロジェクト実績</h2>
-                <p>これまで携わってきた主要なプロジェクトをご紹介します</p>
+                <h2 class="slide-in-up">プロジェクト実績</h2>
+                <p class="fade-in">これまで携わってきた主要なプロジェクトをご紹介します</p>
             </div>
             
             <div class="projects-grid">
-                <div class="card">
-                    <img src="images/chatbot-project.jpg" alt="AIチャットボットプロジェクト" class="card-img">
+                <div class="card scale-stagger">
+                    <div class="card-img-container">
+                        <img src="images/chatbot-project.jpg" alt="AIチャットボットプロジェクト" class="card-img">
+                        <!-- Card Overlay は JavaScript で追加 -->
+                    </div>
                     <div class="card-content">
                         <h3>カスタマーサポートチャットボット</h3>
                         <p>生成AI技術を活用したカスタマーサポート向けチャットボットの開発。顧客の質問に自然な対話で応答し、サポート業務を効率化。</p>
@@ -64,11 +73,15 @@
                             <span class="tag">Tailwind CSS</span>
                             <span class="tag">OpenAI</span>
                         </div>
+                        <!-- Detail Button は JavaScript で追加 -->
                     </div>
                 </div>
                 
-                <div class="card">
-                    <img src="images/aiwebbot.jpg" alt="AIwebアプリ" class="card-img">
+                <div class="card scale-stagger">
+                    <div class="card-img-container">
+                        <img src="images/aiwebbot.jpg" alt="AIwebアプリ" class="card-img">
+                        <!-- Card Overlay は JavaScript で追加 -->
+                    </div>
                     <div class="card-content">
                         <h3>AI webパーソナルボット</h3>
                         <p>テキストプロンプトから自作のボットを生成するWebAiアプリの開発。T3 Stackを用いたフルスタック実装とUI設計を担当。</p>
@@ -80,11 +93,15 @@
                             <span class="tag">Tailwind CSS</span>
                             <span class="tag">Stable Diffusion API</span>
                         </div>
+                        <!-- Detail Button は JavaScript で追加 -->
                     </div>
                 </div>
                 
-                <div class="card">
-                    <img src="images/responsive.jpg" alt="レスポンシブWebデザイン" class="card-img">
+                <div class="card scale-stagger">
+                    <div class="card-img-container">
+                        <img src="images/responsive.jpg" alt="レスポンシブWebデザイン" class="card-img">
+                        <!-- Card Overlay は JavaScript で追加 -->
+                    </div>
                     <div class="card-content">
                         <h3>パーソナルポートフォリオサイト</h3>
                         <p>モダンなUI/UXデザインを取り入れた自己紹介サイト。レスポンシブデザインとアニメーション効果を実装。</p>
@@ -94,6 +111,7 @@
                             <span class="tag">JavaScript</span>
                             <span class="tag">レスポンシブデザイン</span>
                         </div>
+                        <!-- Detail Button は JavaScript で追加 -->
                     </div>
                 </div>
             </div>
@@ -103,73 +121,106 @@
     <section id="skills">
         <div class="container">
             <div class="section-title">
-                <h2>スキルセット</h2>
-                <p>Webデザインと生成AI技術に関する主なスキル</p>
+                <h2 class="slide-in-up">スキルセット</h2>
+                <p class="fade-in">Webデザインと生成AI技術に関する主なスキル</p>
             </div>
             
             <div class="skills-grid">
-                <div class="card skill-card">
-                    <div class="skill-icon">💻</div>
+                <div class="card skill-card scale-stagger">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
                     <h3>フロントエンド開発</h3>
                     <p>HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Tailwind CSS</p>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" style="--progress: 85%"></div>
+                    </div>
                 </div>
                 
-                <div class="card skill-card">
-                    <div class="skill-icon">🎨</div>
+                <div class="card skill-card scale-stagger">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
                     <h3>デザインツール</h3>
-                    <p>Photoshop (基礎), Illustrator (基礎), Dreamweaver(基礎) </p>
+                    <p>Photoshop (基礎), Illustrator (基礎), Dreamweaver(基礎)</p>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" style="--progress: 70%"></div>
+                    </div>
                 </div>
                 
-                <div class="card skill-card">
-                    <div class="skill-icon">🤖</div>
+                <div class="card skill-card scale-stagger">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
                     <h3>AI技術</h3>
                     <p>OpenAI API, Anthropic API, Google AI API, LangChain</p>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" style="--progress: 90%"></div>
+                    </div>
                 </div>
                 
-                <div class="card skill-card">
-                    <div class="skill-icon">🔄</div>
+                <div class="card skill-card scale-stagger">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
                     <h3>バックエンド知識</h3>
-                    <p>Node.js, tRPC, Prisma Python</p>
+                    <p>Node.js, tRPC, Prisma, Python</p>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" style="--progress: 75%"></div>
+                    </div>
                 </div>
                 
-                <div class="card skill-card">
-                    <div class="skill-icon">🔍</div>
+                <div class="card skill-card scale-stagger">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                     <h3>その他</h3>
                     <p>Git, GitHub, Scrum</p>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" style="--progress: 80%"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- 新しい趣味セクション -->
+    <!-- 趣味セクション -->
     <section id="hobbies" class="bg-light">
         <div class="container">
             <div class="section-title">
-                <h2>趣味・特技</h2>
-                <p>仕事以外での私の活動と興味</p>
+                <h2 class="slide-in-up">趣味・特技</h2>
+                <p class="fade-in">仕事以外での私の活動と興味</p>
             </div>
             
             <div class="hobbies-grid">
-                <div class="card hobby-card">
-                    <div class="hobby-icon">🏀</div>
+                <div class="card hobby-card scale-stagger">
+                    <div class="hobby-icon">
+                        <i class="fa-solid fa-basketball"></i>
+                    </div>
                     <h3>バスケットボール</h3>
                     <p>学生時代から続けているバスケットボール。週末は地域のチームで汗を流しています。チームプレーを通じてコミュニケーション能力も培われました。</p>
                 </div>
                 
-                <div class="card hobby-card">
-                    <div class="hobby-icon">⚽</div>
+                <div class="card hobby-card scale-stagger">
+                    <div class="hobby-icon">
+                        <i class="fa-solid fa-futbol"></i>
+                    </div>
                     <h3>フットサル</h3>
                     <p>友人たちと定期的にフットサルを楽しんでいます。戦略的思考と即時の判断力が鍛えられる点が魅力です。</p>
                 </div>
                 
-                <div class="card hobby-card">
-                    <div class="hobby-icon">🏌️‍♂️</div>
+                <div class="card hobby-card scale-stagger">
+                    <div class="hobby-icon">
+                        <i class="fa-solid fa-golf-ball-tee"></i>
+                    </div>
                     <h3>ゴルフ</h3>
                     <p>最近始めたゴルフにはまっています。精密さと集中力、そして自然の中でリフレッシュできる点が気に入っています。バリューゴルフグループへの興味もここから生まれました。</p>
                 </div>
                 
-                <div class="card hobby-card">
-                    <div class="hobby-icon">🧠</div>
+                <div class="card hobby-card scale-stagger">
+                    <div class="hobby-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
                     <h3>AIプロンプトエンジニアリング</h3>
                     <p>趣味として様々な生成AIモデルのプロンプトエンジニアリングを研究しています。異なるモデルからより良い結果を引き出すテクニックの探求が楽しいです。</p>
                 </div>
@@ -178,83 +229,83 @@
     </section>
     
     <!-- AI分析セクション -->
-<section id="ai-tools">
-    <div class="container">
-      <div class="section-title">
-        <h2>生成AIモデル分析</h2>
-        <p>開発で活用している主要な生成AIモデルの特性と活用法</p>
-      </div>
-      
-      <div class="ai-tools-grid">
-        <!-- GPTカード -->
-        <div class="card ai-tool-card">
-          <div class="ai-logo">
-            <img src="images/gpt-logo.png" alt="GPT Logo" width="100" height="100">
-          </div>
-          <div class="ai-content">
-            <h3>GPT (OpenAI)</h3>
-            <p>汎用性の高さと多言語対応に優れた生成AIモデル。コードの生成と修正に特に強みがあり、APIの柔軟性が高いため、多くのプロダクトに組み込みやすい特徴があります。</p>
-            <p><strong>主な活用領域：</strong>コード生成、多言語コンテンツ作成、データ分析補助</p>
-            <p><strong>長所：</strong>広範な知識ベース、APIの成熟度、豊富な統合オプション</p>
-            <p><strong>課題：</strong>特定ドメインでの専門性、長文処理時の一貫性維持</p>
-          </div>
+    <section id="ai-tools">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="slide-in-up">生成AIモデル分析</h2>
+                <p class="fade-in">開発で活用している主要な生成AIモデルの特性と活用法</p>
+            </div>
+            
+            <div class="ai-tools-grid">
+                <!-- GPTカード -->
+                <div class="card ai-tool-card scale-stagger">
+                    <div class="ai-logo">
+                        <img src="images/gpt-logo.png" alt="GPT Logo" width="100" height="100">
+                    </div>
+                    <div class="ai-content">
+                        <h3>GPT (OpenAI)</h3>
+                        <p>汎用性の高さと多言語対応に優れた生成AIモデル。コードの生成と修正に特に強みがあり、APIの柔軟性が高いため、多くのプロダクトに組み込みやすい特徴があります。</p>
+                        <p><strong>主な活用領域：</strong>コード生成、多言語コンテンツ作成、データ分析補助</p>
+                        <p><strong>長所：</strong>広範な知識ベース、APIの成熟度、豊富な統合オプション</p>
+                        <p><strong>課題：</strong>特定ドメインでの専門性、長文処理時の一貫性維持</p>
+                    </div>
+                </div>
+                
+                <!-- Claudeカード -->
+                <div class="card ai-tool-card scale-stagger">
+                    <div class="ai-logo">
+                        <img src="images/claude-logo.png" alt="Claude Logo" width="100" height="100">
+                    </div>
+                    <div class="ai-content">
+                        <h3>Claude (Anthropic)</h3>
+                        <p>長文理解と文脈把握に優れたモデル。倫理的な配慮が強く、複雑な指示にも忠実に従うため、ユーザーサポートや詳細な文書作成に適しています。</p>
+                        <p><strong>主な活用領域：</strong>カスタマーサポート、詳細な文書作成、倫理的配慮が必要な対話</p>
+                        <p><strong>長所：</strong>優れた文脈理解、長文処理能力、倫理的な回答生成</p>
+                        <p><strong>課題：</strong>日本語でのニュアンス理解、特定分野での専門知識の精度</p>
+                    </div>
+                </div>
+                
+                <!-- Geminiカード -->
+                <div class="card ai-tool-card scale-stagger">
+                    <div class="ai-logo">
+                        <img src="images/gemini-logo.png" alt="Gemini Logo" width="100" height="100">
+                    </div>
+                    <div class="ai-content">
+                        <h3>Gemini (Google)</h3>
+                        <p>マルチモーダル処理能力に優れ、テキスト、画像、音声を統合的に理解できるモデル。Googleのサービスとの統合が容易で、検索情報との連携が強みです。</p>
+                        <p><strong>主な活用領域：</strong>マルチモーダルアプリケーション、検索連携サービス、教育コンテンツ</p>
+                        <p><strong>長所：</strong>画像理解能力、Google検索との連携、多様なフォーマット対応</p>
+                        <p><strong>課題：</strong>テキスト生成の自然さ、特定タスクでのパフォーマンス安定性</p>
+                    </div>
+                </div>
+                
+                <!-- Grokカード -->
+                <div class="card ai-tool-card scale-stagger">
+                    <div class="ai-logo">
+                        <img src="images/grok-logo.png" alt="Grok Logo" width="100" height="100">
+                    </div>
+                    <div class="ai-content">
+                        <h3>Grok (xAI)</h3>
+                        <p>最新の情報アクセスと独特の個性を持つモデル。リアルタイムデータへのアクセスと創造的な解答生成が特徴で、ユニークな体験を提供できます。</p>
+                        <p><strong>主な活用領域：</strong>最新情報を必要とするアプリケーション、クリエイティブコンテンツ生成</p>
+                        <p><strong>長所：</strong>リアルタイム情報へのアクセス、独創的な回答生成、ユニークな個性</p>
+                        <p><strong>課題：</strong>ビジネス用途での調整、特定領域での深い専門知識</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ai-comparison fade-up">
+                <h3 class="gradient-text">生成AIモデル比較分析</h3>
+                <p>各モデルの特性を活かした最適な活用方法を探求しています。プロジェクトの性質に応じて異なるモデルを組み合わせることで、より高度なソリューションを実現できると考えています。</p>
+            </div>
         </div>
-        
-        <!-- Claudeカード -->
-        <div class="card ai-tool-card">
-          <div class="ai-logo">
-            <img src="images/claude-logo.png" alt="Claude Logo" width="100" height="100">
-          </div>
-          <div class="ai-content">
-            <h3>Claude (Anthropic)</h3>
-            <p>長文理解と文脈把握に優れたモデル。倫理的な配慮が強く、複雑な指示にも忠実に従うため、ユーザーサポートや詳細な文書作成に適しています。</p>
-            <p><strong>主な活用領域：</strong>カスタマーサポート、詳細な文書作成、倫理的配慮が必要な対話</p>
-            <p><strong>長所：</strong>優れた文脈理解、長文処理能力、倫理的な回答生成</p>
-            <p><strong>課題：</strong>日本語でのニュアンス理解、特定分野での専門知識の精度</p>
-          </div>
-        </div>
-        
-        <!-- Geminiカード -->
-        <div class="card ai-tool-card">
-          <div class="ai-logo">
-            <img src="images/gemini-logo.png" alt="Gemini Logo" width="100" height="100">
-          </div>
-          <div class="ai-content">
-            <h3>Gemini (Google)</h3>
-            <p>マルチモーダル処理能力に優れ、テキスト、画像、音声を統合的に理解できるモデル。Googleのサービスとの統合が容易で、検索情報との連携が強みです。</p>
-            <p><strong>主な活用領域：</strong>マルチモーダルアプリケーション、検索連携サービス、教育コンテンツ</p>
-            <p><strong>長所：</strong>画像理解能力、Google検索との連携、多様なフォーマット対応</p>
-            <p><strong>課題：</strong>テキスト生成の自然さ、特定タスクでのパフォーマンス安定性</p>
-          </div>
-        </div>
-        
-        <!-- Grokカード -->
-        <div class="card ai-tool-card">
-          <div class="ai-logo">
-            <img src="images/grok-logo.png" alt="Grok Logo" width="100" height="100">
-          </div>
-          <div class="ai-content">
-            <h3>Grok (xAI)</h3>
-            <p>最新の情報アクセスと独特の個性を持つモデル。リアルタイムデータへのアクセスと創造的な解答生成が特徴で、ユニークな体験を提供できます。</p>
-            <p><strong>主な活用領域：</strong>最新情報を必要とするアプリケーション、クリエイティブコンテンツ生成</p>
-            <p><strong>長所：</strong>リアルタイム情報へのアクセス、独創的な回答生成、ユニークな個性</p>
-            <p><strong>課題：</strong>ビジネス用途での調整、特定領域での深い専門知識</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="ai-comparison">
-        <h3 class="gradient-text">生成AIモデル比較分析</h3>
-        <p>各モデルの特性を活かした最適な活用方法を探求しています。プロジェクトの性質に応じて異なるモデルを組み合わせることで、より高度なソリューションを実現できると考えています。</p>
-      </div>
-    </div>
-  </section>
+    </section>
     
     <section id="experience" class="bg-light">
         <div class="container">
             <div class="section-title">
-                <h2>経歴・経験</h2>
-                <p>これまでの学習と実務の経験</p>
+                <h2 class="slide-in-up">経歴・経験</h2>
+                <p class="fade-in">これまでの学習と実務の経験</p>
             </div>
             
             <div class="timeline">
@@ -288,11 +339,11 @@
     <section id="ai-insight">
         <div class="container">
             <div class="section-title">
-                <h2>生成AIとWebデザインの融合</h2>
-                <p>私が考える生成AI技術がもたらすWebデザインの未来</p>
+                <h2 class="slide-in-up">生成AIとWebデザインの融合</h2>
+                <p class="fade-in">私が考える生成AI技術がもたらすWebデザインの未来</p>
             </div>
             
-            <div class="card insight-card">
+            <div class="card insight-card fade-up">
                 <p>生成AI技術は、Webデザインの領域に革命をもたらしています。テキストから画像を生成する技術や、自然言語処理を活用したインタラクティブな体験は、ユーザーとWebサイトの関係を変えつつあります。</p>
                 <p>私は特に以下の2つの領域に注目しています：</p>
                 <ul>
@@ -307,7 +358,9 @@
     <section id="contact" class="cta">
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/stephenkobe3008" class="social-link">GitHub</a>
+                <a href="https://github.com/stephenkobe3008" class="social-link">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
             </div>
         </div>
     </section>
