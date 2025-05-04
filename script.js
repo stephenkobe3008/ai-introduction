@@ -320,14 +320,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             ${cardTags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                         </div>
                     </div>
-                    <div style="margin-top: 1.5rem;">
-                        <h4>プロジェクトの課題と解決策:</h4>
-                        <p>このプロジェクトでは、${['ユーザーエクスペリエンスの最適化', 'パフォーマンスの向上', 'モバイル対応の改善', 'データ構造の設計'][index % 4]}が主な課題でした。この課題に対して、${['ユーザーテストを実施し、フィードバックを取り入れたUI/UXの改良', '非同期処理の最適化とキャッシュ戦略の導入', 'レスポンシブデザインの完全実装とタッチ操作の最適化', '効率的なデータモデルの設計とクエリの最適化'][index % 4]}によって解決策を提供しました。</p>
-                    </div>
-                    <div style="margin-top: 1.5rem;">
-                        <h4>成果:</h4>
-                        <p>${['ユーザー満足度が25%向上し、セッション時間が平均2倍に増加', 'ページ読み込み時間が40%短縮し、サーバーコストを30%削減', 'モバイルユーザーのコンバージョン率が35%向上', 'データ処理速度が60%向上し、リアルタイムの分析機能を実現'][index % 4]}</p>
-                    </div>
+                   
                 </div>
                 <div class="modal-footer">
                     <button class="btn modal-close-btn-footer">閉じる</button>
